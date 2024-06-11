@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>검색 엔진 최적화(seo, search engine optimized)</title>
+</head>
+<body>
+  <h2>검색 엔진 최적화(seo, search engine optimized) - meta</h2>
+  <ul>
+    <li>!DOCTYPE html : 문서 버전의미, html5</li>
+    <li>html lang="ko" : 문서 안의 주언어가 한글이다(주 사용 언어를 명시)</li>
+    <li>charset="UTF-8" : charset(문자표현 코드), UTF-8(국제 표준코드) , euc-kr(한글표준코드)</li>
+    <li>meta : 문서의 내용이나 저자, 날짜정보, 키워드 등을 나타내고자 할 때 사용</li>
+  </ul>
+  <p>meta 태그는 웹서버와 브라우저간의 상호 교환되는 정보를 정의하는데 사용하며, 웹페이지가 담고있는 콘텐츠가 아닌 웹페이지 자체의 정보를 명시하기 위한 목저으로 사용되는 html 태그를 의미한다.</p>
+  <p>이러한 웹페이지의 메타정보는 주로 html 의 meta요소를 통해 마크업하며, html 문서 내에서  head 아래에 배치되므로 일반 유저가 보게되는 웹페이지 디자인에는 영향을 전혀 미치지 않고, 문서가 어떤 내용을 담고 있고, 누가 만들었는지 등 문서자체의 특성을 담고 있다. </p>
+  <p>반면 검색엔진(naver, daum, google, nate...)등과 같은 기계들이 웹페이지를 읽어야 할 땐느 메타태그의 내용들이 해당서비스에서 어떻게 표시될지를 결정하는 매우 핵심적인 요소가 된다.</p>
+
+  <h3>1. seo - TITLE</h3>
+  <p>검색 엔진은 주기적으로 웹사이트를 방문하여 각 웹페이지가 어떤 콘텐츠를 제공하고 있는 지를 파악하고 수집하여, 데이터 베이스에 저장하는데, 점전 지능적(ai)으로 진화하고 있다. 또한 어느정도까지는 스스로 웹페이지의 구조와 내용을 파악할 수 있다. 그럼에도 불구하고 메타태그를 통해 웹페이지에 대한 정보를 좀 더 주도적으로 명시한다면 SEO(검색엔진 최적화) 측면에서 유리하다.</p>
+  <p>예) 메인페이지 : Starbucks Kore</p>
+  <p>예) 서브페이지 : COFFEE | Starbucks Kore</p>
+
+  <h3>2. seo - META</h3>
+  <p>웹사이트 제목만 예외적으로 title요소를 사용하고, 그 밖의 다른 웹페이지의 메타정보는 meta 요소를 사용하여 표현한다.</p>
+  <p>meta 요소를 사용할 때는 name 속성을 활용하여 메타정보의 이름을 명시하고, content속성을 통해 메타 정보의 이름과 내용을 명시한다.</p>
+
+  <dl>metatag의 3가지 속성
+    <dt>1. http-equiv='항목명'</dt>
+    <dd>웹브라우저가 서버에 명령을 내리는 속성으로 name 속성을 대신하여 사용될 수 있으며, html문서가 응답 헤더와 함께 웹 서버로부터 웹브라우저에 전송되었을 때만 의미</dd>
+    <dt>2. content='정보값'</dt>
+    <dd>meta정보의 내용을 저장</dd>
+    <dt>3. name='정보이름'</dt>
+    <dd>몇개의 meta 정보의 이름을 사용할 수 있으며 지정하지 않으면 http-equiv와 같은 기능을 한다.</dd>
+  </dl>
+
+  <h3>meta 태그의 종류</h3>
+  <ol>
+    <li>meta name="keywords" content="여성의류, 웹표준" : 검색 엔진에 의해 검색되는 단어를 지정</li>
+    <li>meta name="Description" content="신상의류, 자신의 스타일에 맞는 의상 추천" : 검색 결과에 표시되는 문자를 지정</li>
+    <li>meta name="Robots" content="noindex, nofollow" : 검색 로봇 제어
+      <ul>
+        <li>ALL(기본값) : content="index, follow"</li>
+        <li>None : content="noindex, nofollow"</li>
+        <li>index : 그 페이지를 수집 대상으로 한다</li>
+        <li>Follow : 그 페이지를 포함해 링크가 걸린 곳을 수집대상으로 한다</li>
+        <li>Noindex : 그 페이지를 수집 대상에서 제외</li>
+        <li>Nofollow : 그 페이지를 포함하여 링크가 걸린 곳을 수집대상으로 하지 않는다</li>
+      </ul>
+    </li>
+    <li>meta http-equiv = "Content-Type" content="text/html" charset="UTF-8" : 문자 코드의 종류를 설정</li>
+    <li>meta name="Date" content="2023-01-19T07:45:37+09:00" 작성날짜(제작일)</li>
+    <li>meta http-equiv="X-UA-Compatible" content="IE-edge" : 브라우저 호환성을 지정</li>
+    <li>meta http-equiv="Subject" content="웹 표준을 위한 사이트" : 홈페이지 주제</li>
+    <li>meta http-equiv="Title" content="웹표준" : 홈페이지 제목</li>
+    <li>meta http-equiv="Author" content="name" : 작성자 </li>
+    <li>meta http-equiv="Other agent" content="name" : 책임자 </li>
+    <li>meta http-equiv="Distribution" content="name" : 배포자 </li>
+    <li>meta http-equiv="copyright" content="copyright@dothome" : 저작권 </li>
+    <li>meta http-equiv="build" content="date" : 제작일 </li>
+    <li>meta http-equiv="Last_Modified" content="Mon,20 jul 2016 19:30:30" : 최종수정일 </li>
+    <li>meta http-equiv="Refresh" content="60" : 지정시간마다 새로고침</li>
+    <li>meta http-equiv="Refresh" content="5;url=주소" : 입력한 주소로 지정시간 후(5초) 자동연결</li>
+    <li>meta http-equiv="Page-enter" content="revealtrans(Duration=1,Transition=12)" : 페이지 장면 전환 효과</li>  
+  </ol>
+
+  <h3>seo(검색엔진 최적화) 태그 - open graph</h3>
+  <p>요즘에는 SNS와 메신저를 통해 웹페이지의 링크를 공유하는 일이 잦아지면서 메타태그가 좀 더 넓은 분야에서 활요되고 있습니다. 대표적인 예로 페이스북이나 카카오톡, 슬렉과 같은 앱에서 웹페이지의 링크만 입력하더라도 해당 웹페이지의 콘텐츠의 미리보기를 카드 형태로 나타나는 것을 들 수 있다.</p>
+  <p>일반적으로 이러한 서비스들은 open graph 프로토콜이라고 불리는 업계표준을 따라서 '웹페이지 콘텐츠 미리보기'를 지원하고 있습니다. 따라서 우리도 open graph프로토콜에서 정의하는 메타태그를 적절히 사용하면 콘텐츠 미리보기에 원하는 내용이 표시되도록 어느정도 제어할 수 있습니다.</p>
+  
+  <h4>open graph태그의 이름은 og: 로 시작한다.</h4>
+  <p>meta name="og:site_name" content="사이트명" : 사이트 제목</p>
+  <p>meta name="og:title" content="페이지 제목" : 웹페이지의 제목 </p>
+  <p>meta name="og:Description" content="페이지 설명" : 웹페이지의 상세설명</p>
+  <p>meta name="og:type" content="webpage" : 웹페이지의 유형
+  </p>
+  <p>meta name="og:url" content="http://design2010.dothome.co.kr" : 웹페이지의 주소</p>
+  <p>meta name="og:img" content="http://이미지경로" : 웹페이지의 썸네일 이미지 주소 </p>
+
+  <h3>검색 엔진이 검색할 수 있도록 제어하는 Robots.txt 파일 작성법</h3>
+  <p>cafe의 프론트엔드 개발 카테고리(기타정보)에서 찾을 수 있다</p>
+  <p>https://cafe.naver.com/uiuxweb/6520</p>
+
+  <h3>각 사이트마다 서치어드바이저 라는 서비스를 통해 웹사이트를 등록한다</h3>
+  <p>검색 사이트에 웹사이트가 검색되게 하기 위해서는 구글, 다음, 네이트에서 '서치어드바이저'라는 서비스를 제공하는데, 정상적으로 웹서버를 운영하고 사이트가 제작된 경우라면 서비스를 가입할 수 있고, 자체 점검을 통해 '승인'이 나면 각 검색 사이트에 등록시켜주는 서비스이다.</p>
+  <p>사업자 번호가 있어야 등록해준다!</p>
+  <p>https://searchadvisor.naver.com/</p>
+</body>
+</html>
