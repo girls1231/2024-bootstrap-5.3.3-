@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩14_카드 디자인</title>
+  <!-- 부트스트랩 css cDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- 부트스트랩 js - cDN-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- 부트스트랩 아이콘의 주소 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <h2>부트스트랩14_카드 디자인</h2>
+  <p>카드는 유연하고 확장이 가능한 컨테이너이다.</p>
+  <p>headers나 footers의 옵션, 다양한 컨텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있다.</p>
+  <p>카드는 적은 마크업과 스타일로 되어있으나 다양한 사용자 정의가 가능하다.</p>
+  <p>flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능하다. 기본값에는 margin 설정이 없어서 필요에 따라 간격 유틸리티를 사용한다.</p>
+
+  <br><br>
+
+  <h3>1. 카드 콘텐츠 기본</h3>
+  
+  <ul>
+    <li>부모박스에 .card 적용</li>
+    <li>자식 요소에 .card-body 적용</li>
+    <li>.card-body 안에 h3 제목은 .card-title</li>
+    <li>.card-body 안에 p 내용은 .card-text</li>
+    <li>.card-body 안에 a태그 요소가 2개 인상인 경우 인라인으로 배치하기 위해 .card-link 적용</li>
+  </ul>
+  <div class="card" style="width: 300px;">
+    <img src="http://placeholder.com/190x235" alt="">
+    <div class="card-body">
+      <h4 class="card-title">카드 콘텐츠 제목</h4>
+      <p class="card-text">콘텐츠의 설명</p>
+      <a href="#" title="" class="card-link">콘텐츠 바로가기</a>
+      <a href="#" title="" class="card-link">콘텐츠 바로가기</a>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="card" style="width: 300px;">
+    <img src="Rectangle 867.png" alt="">
+    <div class="card-body">
+      <h4 class="card-title">창원 탱고 마라톤</h4>
+      <p class="card-text">2024.10.03~2024.10.06</p>
+      <p class="card-text">회원가 36,763원</p>
+    </div>
+  </div>
+
+
+  <h3>2. 카드 디자인 가로 여러개 배치</h3>
+ 
+  <div class="row"><!-- 카드 들의 부모 -->
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card" style="width: 300px;">
+        <img src="http://placeholder.com/190x235" alt="">
+        <div class="card-body">
+          <h4 class="card-title">카드 콘텐츠 제목</h4>
+          <p class="card-text">콘텐츠의 설명</p>
+          <a href="#" title="" class="card-link btn btn-primary">#야외</a>
+          <a href="#" title="" class="card-link btn btn-primary">#페스티벌</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card" style="width: 300px; ">
+        <img src="http://placeholder.com/190x235" alt="">
+        <div class="card-body">
+          <h4 class="card-title">카드 콘텐츠 제목</h4>
+          <p class="card-text">콘텐츠의 설명</p>
+          <a href="#" title="" class="card-link btn btn-primary">#야외</a>
+          <a href="#" title="" class="card-link btn btn-primary">#페스티벌</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card" style="width: 300px; ">
+        <img src="http://placeholder.com/190x235" alt="">
+        <div class="card-body">
+          <h4 class="card-title">카드 콘텐츠 제목</h4>
+          <p class="card-text">콘텐츠의 설명</p>
+          <a href="#" title="" class="card-link btn btn-outline-primary">#야외</a>
+          <a href="#" title="" class="card-link btn btn-outline-primary">#페스티벌</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <h3>3. 모두투어 카드디자인</h3>
+
+  <div class="row"><!-- 카드 들의 부모 -->
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card" style="width: 300px; height: 450px;">
+        <img src="modu1.png" alt="">
+        <div class="card-body">
+          <h4 class="card-title">[홈쇼핑인기상품]오사카3일 (꽉찬패턴)</h4>
+          <p class="card-text">#꽉찬패턴 #오사카시내호텔 #천연온천대욕장 #에코플랜 #특식</p>
+          <p class="card-text">599,900원~</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card" style="width: 300px; height: 450px;">
+        <img src="modu2.png" alt="">
+        <div class="card-body">
+          <h4 class="card-title">[NEW]푸켓세미팩 5일(핵심+자유+맛집탐방)</h4>
+          <p class="card-text">#산호섬 #마사지 #올드타운 #과일시장 #사이먼쇼 #푸켓맛집 #쓰리몽키스 #틴 바론 럭셔리 레스토랑</p>
+          <p class="card-text">599,900원~</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 mb-3 mb-sm-0">
+      <div class="card" style="width: 300px; height: 450px;">
+        <img src="modu3.png" alt="">
+        <div class="card-body">
+          <h4 class="card-title">[비교불가]장가계 원가계+천문산4일</h4>
+          <p class="card-text">5성급/발마사지/보봉호VIP/천문산/원가계/백룡엘리베이터/보봉호</p>
+          <p class="card-text">429,000원~</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+</body>
+</html>
