@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩15_내비게이션바</title>
+  <!-- 부트스트랩 css cDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- 부트스트랩 js - cDN-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- 부트스트랩 아이콘의 주소 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <h2>부트스트랩15_내비게이션바</h2>
+  <br>
+  <h3>작동원리</h3>
+  <ul>
+    <li>네비게이션 바는 .navbar를 .navbar-expand{-sm,-md,-lg,-xl,-xxl}로 감싸야 하며, color scheme 클래스가 필요</li>
+    <li>네비게이션과 그 콘텐츠는 기본저긍로 유동적. container를 변경하여 다양한 방법으로 가로폭을 제한</li>
+    <li>내비게이션에서 배치 및 간격제어는 spacing, flex 유틸리티 클래스를 사용</li>
+    <li>내비게이션은 기본적으로 반응형이나, 간단히 변경가능. 반응형 동작은 collapse Javascirpt 플로인에 의존</li>
+    <li>접근성을 확보하려면 nav요소를 사용하거나 혹은 div 요소와 같이 보다 범용적인 요소를 사용하는 경우, role="navigation"을 추가하여 스크린 리더의 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 한다</li>
+    <li>.navbar 기본 클래스로 범위가 지정된 cSS변수를 사용하여 테마를 지정할 수 있다</li>
+    <li>.navbar-light는 더이상 사용되지 않고 추가 스타일을 추가하는 대신  cSS 변수를 재정의하도록 .navbar-dark가 재작성됨</li>
+  </ul>
+
+  <main>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-dark bg-danger navbar-expand-md" aria-label="내비게이션바">
+      <div class="container-fluid">
+        <a href="" title="메뉴" class="navbar-brand">Navbar</a>
+        <!-- 모바일 해상도에서의 토글 버튼 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-label="전체메뉴" 
+        data-bs-target="#menu">
+          <span class="navbar-toggler-icon"><span style="opacity: 0;">button<span></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item"><a href="" title="" class="nav-link active">색을 선명하게 활성화</a></li>
+            <li class="nav-item"><a href="" title="" class="nav-link disabled">클릭을 못하게 막기</a></li>
+            <li class="nav-item"><a href="" title="" class="nav-link">nav-link 표준</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<br>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-dark bg-warning navbar-expand-md" aria-label="내비게이션바">
+      <div class="container-fluid">
+        <a href="" title="메뉴" class="navbar-brand">Navbar</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">     
+            <li class="nav-item dropdown">
+              <a href="" title="" class="nav-link dropdown-toggle" 
+              data-bs-toggle="dropdown">드롭다운</a>
+              <ul class="dropdown-menu">
+                <li><a href="" title="" class="dropdown-item">메뉴1</a></li>
+                <li><a href="" title="" class="dropdown-item">메뉴2</a></li>
+                <li><a href="" title="" class="dropdown-item">메뉴3</a></li>
+                <li><a href="" title="" class="dropdown-item">메뉴4</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 검색어 치고 엔터치면 넘어가는 검색창 -->
+          <form action="" method="" name="" role="search">
+            <input type="search" placeholder="검색어 입력" aria-label="검색어 입력" class="form-control">
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <br>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-dark bg-primary navbar-expand-md" aria-label="내비게이션바">
+      <div class="container-fluid">
+        <a href="" title="메뉴" class="navbar-brand">Navbar</a>
+        <div class="collapse navbar-collapse">
+          <!-- 검색어 치고 엔터치면 넘어가는 검색창 -->
+          <form action="" method="" name="" role="search">
+            <input type="search" placeholder="검색어 입력" aria-label="검색어 입력" class="form-control">
+          </form>
+        </div>
+      </div>
+    </nav>
+  </main>
+</body>
+</html>
